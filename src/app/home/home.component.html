@@ -1,0 +1,48 @@
+<div>
+    <select type="test" name="Size"
+    [(ngModel)]="model.size"  placeholder="Size"  (ngModelChange)="load()"
+    >
+    <option *ngFor="let option of option" [value]="option.Code" >{{option.value}}</option>
+</select>
+
+
+  <br>
+
+  
+  <table >
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <!-- <tr *ngFor="let data of final"> -->
+        <td>{{title}}</td>
+        <td>{{firstname}}</td>
+        <td>{{lastname}}</td>
+        
+      <!-- </tr/> -->
+    </tbody>
+  </table>
+</div>
+<br>
+
+<div style="border: red;">
+
+<input type="text" class="form-control form-control-lg" name="title"
+    [(ngModel)]="model.title" placeholder="Title">
+
+<input type="text" class="form-control form-control-lg" name="firstname"
+    [(ngModel)]="model.firstname" placeholder="First Name">
+
+<input type="email" class="form-control form-control-lg" name="lastname"
+[(ngModel)]="model.lastname" placeholder="Last Name">
+
+  <button style="  background-color: white;
+  color: black;
+  border: 2px solid;" (click)="adduser()">Add User</button>
+
+  </div>
